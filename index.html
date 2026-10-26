@@ -805,6 +805,7 @@ body.editing .pc-inner .photo-btn{top:12px;bottom:auto;z-index:6}
 .rv-on .sh.rv-write{padding:.45em .7em;margin:-.45em -.7em calc(clamp(40px,6vw,64px) - .45em)}
 .rv-on .fw-n.rv-write{padding:.3em .6em;margin-left:-.6em;margin-right:-.6em}
 .rv-on .rv-write{will-change:mask-position,-webkit-mask-position}
+.card-polaroid{padding-bottom:2.2cqw!important}
 /* ===== Password gate (pop-up after clicking the envelope) ===== */
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .pw-modal{position:fixed;inset:0;z-index:20;display:grid;place-items:center;padding:20px;background:rgba(20,16,12,.55);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);opacity:0;transition:opacity .3s ease}
@@ -1275,11 +1276,11 @@ function view(){
 
   return '' +
   SYMBOL + '<div class="intro" id="intro" role="dialog" aria-label="Wedding invitation">' + P("env") +
-    '<div class="env-stage">' + T("env-kicker","p","env-top") +
+    '<div class="env-stage">' + 
     '<div class="env" id="env" role="button" tabindex="0" aria-label="Open the invitation"><div class="env-inside"></div>' +
       '<div class="env-card">' + CARD_PAPER + LACE + DOILY + '<div class="card-txt">' + T("env-card-k","span","env-card-k") + '<span class="env-card-n">' + T("card-n1","span","cn") + '<span class="amp2">&amp;</span>' + T("card-n2","span","cn") + "</span>" + '<span class="card-rule"></span>' + T("env-date","span","env-card-d") + T("env-place","span","env-card-p") + "</div>" +
         '<div class="card-wax">' + WAX + '</div>' +
-        '<figure class="card-polaroid">' + P("card","pol-photo") + T("card-cap","figcaption","pol-cap") + "</figure></div>" +
+        '<figure class="card-polaroid">' + P("card","pol-photo") + "</figure></div>" +
       '<div class="env-pocket"><i class="pk pk-l"><b></b></i><i class="pk pk-r"><b></b></i><i class="pk pk-b"><b></b></i></div><div class="env-light"></div>' + flapSVG() +
       '<svg class="env-doily" viewBox="0 0 600 395" preserveAspectRatio="none" aria-hidden="true"><g fill="none" stroke="#fff" stroke-linecap="round"><ellipse cx="300" cy="192" rx="246" ry="150" stroke-width="11" stroke-dasharray="0 13" opacity=".9"/><ellipse cx="300" cy="192" rx="238" ry="143" stroke-width="1.4"/><ellipse cx="300" cy="192" rx="229" ry="135" stroke-width="3.5" stroke-dasharray="0 7"/><ellipse cx="300" cy="192" rx="220" ry="127" stroke-width="1"/><ellipse cx="300" cy="192" rx="212" ry="120" stroke-width="6" stroke-dasharray="1 10" opacity=".7"/></g></svg>' +
       '<div class="env-words">' + STAMPS + T("env-inv","p","w1") + T("env-to","p","w3") + '<p class="w2">' + T("env-n1","span") + ' <span class="amp">&amp;</span> ' + T("env-n2","span") + "</p>" + T("env-date2","p","w4") + T("env-place2","p","w5") + "</div>" +
